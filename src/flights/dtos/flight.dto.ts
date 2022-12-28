@@ -1,13 +1,12 @@
 import { Expose, Transform } from 'class-transformer';
-import { AirlineDto } from '../../airlines/dtos/airline.dto';
 
 export class FlightDto {
   @Expose()
   id: string;
 
-  @Transform(({ obj }) => parseInt(obj.flightNumber))
+  @Transform(({ obj }) => obj.flightNumber)
   @Expose()
-  number: number;
+  number: string;
 
   @Expose()
   source: string;
