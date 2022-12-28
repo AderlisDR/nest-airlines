@@ -1,4 +1,5 @@
 import { Expose, Type } from 'class-transformer';
+import { AirportDto } from '../../airports/dtos/airport.dto';
 import { FlightDto } from '../../flights/dtos/flight.dto';
 
 export class AirlineDto {
@@ -7,6 +8,10 @@ export class AirlineDto {
 
   @Expose()
   name: string;
+
+  @Expose()
+  @Type(() => AirportDto)
+  airports: AirportDto[];
 
   @Expose()
   @Type(() => FlightDto)

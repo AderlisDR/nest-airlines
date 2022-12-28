@@ -3,6 +3,23 @@ POST http://localhost:3000/airlines
 Content-Type: application/json
 
 {
-  "name": "Arajet",
-  "airportId": "b805ae3c-18a8-4ca1-a2df-e38068868095"
+  "name": "American Airlines",
+  "airportId": "59c18252-9ca7-4e99-8c6e-715f24c5e050"
 }
+
+### Gets all airlines registered
+GET http://localhost:3000/airlines
+
+### Gets a specific airline by the id
+GET http://localhost:3000/airlines/738ac450-ce2a-4507-abdc-9e70377ae515
+
+### Updates an airline
+PATCH http://localhost:3000/airlines/11ea8fea-f804-460e-9eea-a2dbb50f0760
+Content-Type: application/json
+
+{
+  "name": "Copa Airlines"
+}
+
+### Deletes an existing airline
+DELETE http://localhost:3000/airlines/d09f934a-0e7a-48e6-bcdf-937afe88bd5c
