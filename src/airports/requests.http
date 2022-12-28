@@ -1,0 +1,9 @@
+### Creates a new airport
+POST http://localhost:3000/airports
+Content-Type: application/json
+
+{
+  "name": "Aeropuerto Internacional de las Americas",
+  "city": "Santo Domingo",
+  "state": "Santo Domingo"
+}

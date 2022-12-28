@@ -15,5 +15,5 @@ export class Airport extends BaseEntity {
 
   @ManyToMany(() => Airline)
   @JoinTable()
-  airlines: Airline;
+  airlines: Airline[];
 }
