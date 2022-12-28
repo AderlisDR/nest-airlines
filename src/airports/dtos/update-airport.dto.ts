@@ -1,4 +1,4 @@
-import { IsOptional, IsString, Length } from 'class-validator';
+import { IsBoolean, IsOptional, IsString, Length } from 'class-validator';
 
 export class UpdateAirportDto {
   @IsString()
@@ -15,4 +15,12 @@ export class UpdateAirportDto {
   @Length(5, 100)
   @IsOptional()
   state: string;
+
+  @IsBoolean()
+  @IsOptional()
+  isActive: boolean;
+
+  @IsBoolean()
+  @IsOptional()
+  isArchived: boolean;
 }
