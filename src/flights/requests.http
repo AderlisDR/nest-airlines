@@ -3,10 +3,28 @@ POST http://localhost:3000/flights
 Content-Type: application/json
 
 {
-  "number": "0003",
+  "number": "0002",
   "source": "Aeropuerto Internacional de las Americas",
   "destination": "Aeropuerto El Dorado",
   "departurDateTime": "2022-12-29 21:00",
   "arrivalDateTime": "2022-12-30 05:00",
-  "airlineId": "57611992-7841-4c36-91d5-aa9b638cb2b0"
+  "airlineId": "11ea8fea-f804-460e-9eea-a2dbb50f0760"
 }
+
+### Gets all flights registered
+GET http://localhost:3000/flights
+
+### Gets a specific flight by the id
+GET http://localhost:3000/flights/aedce251-4df0-467d-8c01-d6d8c5aa3c1d
+
+### Updates a flight
+PATCH http://localhost:3000/flights/ed7f0ded-ab46-4340-abaf-5c19d7074255
+Content-Type: application/json
+
+{
+  "source": "Aeropuerto El Dorado",
+  "destination": "Aeropuerto Internacional de la Americas"
+}
+
+### Deletes an existing flight
+DELETE http://localhost:3000/flights/aedce251-4df0-467d-8c01-d6d8c5aa3c1d

@@ -1,4 +1,5 @@
-import { Expose, Transform } from 'class-transformer';
+import { Expose, Transform, Type } from 'class-transformer';
+import { AirlineDto } from '../../airlines/dtos/airline.dto';
 
 export class FlightDto {
   @Expose()
@@ -20,7 +21,7 @@ export class FlightDto {
   @Expose()
   arrivalDateTime: Date;
 
-  @Transform(({ obj }) => obj.airline.id)
   @Expose()
-  airlineId: string;
+  @Type(() => AirlineDto)
+  airline: AirlineDto;
 }
