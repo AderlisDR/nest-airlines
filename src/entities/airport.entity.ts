@@ -13,7 +13,7 @@ export class Airport extends BaseEntity {
   @Column({ type: 'varchar', length: 100 })
   state: string;
 
-  @ManyToMany(() => Airline)
+  @ManyToMany(() => Airline, (airline) => airline.airports)
   @JoinTable()
   airlines: Airline[];
 }
