@@ -1,0 +1,8 @@
+### Creates a new airline
+POST http://localhost:3000/airlines
+Content-Type: application/json
+
+{
+  "name": "Arajet",
+  "airportId": "b805ae3c-18a8-4ca1-a2df-e38068868095"
+}
