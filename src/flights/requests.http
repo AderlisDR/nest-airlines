@@ -3,10 +3,10 @@ POST http://localhost:3000/flights
 Content-Type: application/json
 
 {
-  "number": "2021",
+  "number": "0003",
   "source": "Aeropuerto Internacional de las Americas",
   "destination": "Aeropuerto El Dorado",
   "departurDateTime": "2022-12-29 21:00",
   "arrivalDateTime": "2022-12-30 05:00",
-  "airlineId": "8b5c8209-6442-4130-ba9b-bde16a6aaae2"
+  "airlineId": "57611992-7841-4c36-91d5-aa9b638cb2b0"
 }

@@ -7,3 +7,20 @@ Content-Type: application/json
   "city": "Santo Domingo",
   "state": "Santo Domingo"
 }
+
+### Gets all airports registered
+GET http://localhost:3000/airports
+
+### Gets a specific airport by the id
+GET http://localhost:3000/airports/b805ae3c-18a8-4ca1-a2df-e38068868095
+
+### Updates an airport
+PATCH http://localhost:3000/airports/b805ae3c-18a8-4ca1-a2df-e38068868095
+Content-Type: application/json
+
+{
+  "name": "Aeropuerto Internacional de las Americas (AILA)"
+}
+
+### Deletes an existing airport
+DELETE http://localhost:3000/airports/e67733c9-a48c-4509-8bd9-429563136e13
