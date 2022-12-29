@@ -22,7 +22,7 @@ async function bootstrap() {
       },
     );
 
-    SwaggerModule.setup('swagger', app, document);
+    SwaggerModule.setup('', app, document);
   }
 
   await app.listen(3000);

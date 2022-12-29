@@ -1,4 +1,5 @@
 import { TypeOrmModuleOptions } from '@nestjs/typeorm';
+import { SeederOptions } from 'typeorm-extension';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 require('dotenv').config();
@@ -39,8 +40,15 @@ class ConfigService {
       database: this.getValue('POSTGRES_DATABASE'),
       entities: ['./src/entities/**/*.entity{.ts,.js}'],
       migrationsTableName: 'migrations',
-      migrations: ['./src/migrations/*.ts'],
+      migrations: ['./src/db/migrations/*{.ts,.js}'],
       ssl: this.isProduction(),
+    };
+  }
+
+  public getSeederOptions(): SeederOptions {
+    return {
+      seeds: ['./src/db/seeds/**/*{.ts,.js}'],
+      factories: ['./src/db/factories/**/*{.ts,.js}'],
     };
   }
 }
