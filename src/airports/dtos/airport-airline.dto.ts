@@ -1,9 +1,8 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { Expose, Type } from 'class-transformer';
-import { AirlineAirportDto } from './airline-airport.dto';
-import { AirlineFlightDto } from './airline-flight.dto';
+import { AirlineFlightDto } from '../../airlines/dtos/airline-flight.dto';
 
-export class AirlineDto {
+export class AirportAirlineDto {
   @ApiProperty()
   @Expose()
   id: string;
@@ -11,11 +10,6 @@ export class AirlineDto {
   @ApiProperty()
   @Expose()
   name: string;
-
-  @ApiProperty({ type: () => [AirlineAirportDto] })
-  @Expose()
-  @Type(() => AirlineAirportDto)
-  airports: AirlineAirportDto[];
 
   @ApiProperty({ type: () => [AirlineFlightDto] })
   @Expose()

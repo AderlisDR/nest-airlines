@@ -1,8 +1,7 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { Expose, Transform, Type } from 'class-transformer';
-import { FlightAirlineDto } from './flight-airline.dto';
+import { Expose, Transform } from 'class-transformer';
 
-export class FlightDto {
+export class AirlineFlightDto {
   @ApiProperty()
   @Expose()
   id: string;
@@ -27,9 +26,4 @@ export class FlightDto {
   @ApiProperty()
   @Expose()
   arrivalDateTime: Date;
-
-  @ApiProperty({ type: () => FlightAirlineDto })
-  @Expose()
-  @Type(() => FlightAirlineDto)
-  airline: FlightAirlineDto;
 }
