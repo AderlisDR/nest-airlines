@@ -77,7 +77,7 @@ Make sure that Docker Desktop is up and running, then open your terminal/console
 npm run start:dev:db -- {{DB_NAME}} {{DB_PASWORD}} {{SERVER_NAME}} [[SERVER_PORT]]
 ```
 
-> **Notes:** Make sure to pass all the arguments in their corresponding order, this values will be use by the script to start a fresh Postgresql server and database when you run the command. Also make sure that this values are exactly the same as your variables in your **`.env`** file.  
+> **Notes:** Make sure to pass all the arguments in their corresponding order, this values will be used by the script to start a fresh Postgresql server and database when you run the command. Also make sure that this values are exactly the same as your variables in your **`.env`** file.  
 > **`{{DB_NAME}}`** - Name for the new database.  
 > **`{{DB_PASWORD}}`** - Password for the new database.  
 > **`{{SERVER_NAME}}`** - Name for the server.  
@@ -115,29 +115,29 @@ To generate a new migration, open your terminal/console in the project root dire
   npm run typeorm:migration:generate -- ./src/db/migrations/{YourMigrationName}
 ```
 
-Then, you can review your migration going into *`src >> db >> migrations`*, here you shoul be able to se a new file with {YourMigrationName} on it.
+Then, you can review your migration going into *`src >> db >> migrations`*, here you should be able to see a new file with {YourMigrationName} on it.
 
 ---
 
 ## Troubleshooting
 
-If you're on Mac, you might enconter some troubles when running `npm run start:dev:db` command. This might be produced because you don't have the required permissions to execute the script, to fix this, open your terminal/console inside *`src >> scripts`* from the project root directory and run:
+If you're on Mac, you might encounter some troubles when running `npm run start:dev:db` command. This might be produced because you don't have the required permissions to execute the script file, to fix this, open your terminal inside *`src >> scripts`* from the project root directory and run:
 
 ```bash
   sudo chmod 755 'start-dev-db.sh'
 ```
 
-This command will give to your user the permission to execute the script.
+This command will give to your user the permissions to execute the script file.
 
-If you're on Windows, you'll need to do some installation and execute the script file manually if you want to get the Postgresql server started, for this follow the next steps:
+If you're on Windows, you'll need to do some installation and execute the script file manually if you want to get the Postgresql server started, for this, follow the next steps:
 
 1. Go to *`Settings > Update & Security > For Developers`*.
 2. Check the *`Developer Mode`* radio button.
 3. Search for "*`Windows Features`"*, choose “*`Turn Windows features on or off`*”.
 
-Scroll to find WSL, check the box, and then install it. Once done, one has to reboot to finish installing the requested changes. Press Restart now. BASH will be available in the Command Prompt and PowerShell.
+Scroll to find WSL, check the box, and then install it. Once done, you'll have to reboot to finish installing the requested changes. Once your PC is restarted, BASH will be available in the Command Prompt and PowerShell.
 
-To execute the script, open Command Prompt and navigate to *`src >> scripts`* from the project root directory, then run:
+To execute the script, open Command Prompt and navigate to *`src >> scripts`* from the project root directory and run:
 
 ```bash
   bash start-dev-db.sh
