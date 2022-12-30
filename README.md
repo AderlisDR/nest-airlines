@@ -9,10 +9,10 @@
 * [Local Development](#local-development)
   * [Setting up database connection](#setting-up-database-connection)
   * [Starting Postgresql server](#starting-postgresql-server)
-  * [Generating migrations](#generating-migrations)
   * [Running migrations](#running-migrations)
   * [Seeding the Database](#seeding-the-database)
   * [Starting the server](#starting-the-server)
+  * [Generating migrations](#generating-migrations)
 * [Troubleshooting](#troubleshooting)
 
 ---
@@ -34,12 +34,12 @@ A simple NestJS API for CRUD operations on airports, airlines and flights.
 
 ### Local Installation
 
-1. [Set your database connection](#setting-up-database-connection).
-2. Oper your terminal/console in the project root directory.
-3. [Get database server up and running](#starting-postgresql-server).
-4. [Run migrations](#running-migrations).
-5. [(Optional) Seeding the database](#seeding-the-database).
-6. Run `npm install` to get all dependencies.
+1. Oper your terminal/console in the project root directory.
+2. Run `npm install` to get all dependencies.
+3. [Set your database connection](#setting-up-database-connection).
+4. [Get database server up and running](#starting-postgresql-server).
+5. [Run migrations](#running-migrations).
+6. [(Optional) Seeding the database](#seeding-the-database).
 7. [Start the server](#starting-the-server).
 
 To make sure that everything worked as spected open your web browser and go to <http://localhost:3000>, here you should be able to see the API swagger documentation.
@@ -83,16 +83,6 @@ npm run start:dev:db -- {{DB_NAME}} {{DB_PASWORD}} {{SERVER_NAME}} [[SERVER_PORT
 > **`{{SERVER_NAME}}`** - Name for the server.  
 > **`[[SERVER_PORT]]`** - (Optional) Port in your computer to map the container port, if none is provided then 5432 will be used, so if you don't provide any, make sure that your **`.env`** file contains: **`POSTGRES_PORT=5432`** variable.
 
-### Generating migrations
-
-To generate a new migration, open your terminal/console in the project root directory and run:
-
-```bash
-  npm run typeorm:migration:generate -- ./src/db/migrations/{YourMigrationName}
-```
-
-Then, you can review your migration going into *`src >> db >> migrations`*, here you shoul be able to se a new file with {YourMigrationName} on it.
-
 ### Running migrations
 
 To run the migrations, open your terminal/console in the project root directory and run:
@@ -116,6 +106,16 @@ To start the server, open your terminal/console in the project root directory an
 ```bash
   npm run start:dev
 ```
+
+### Generating migrations
+
+To generate a new migration, open your terminal/console in the project root directory and run:
+
+```bash
+  npm run typeorm:migration:generate -- ./src/db/migrations/{YourMigrationName}
+```
+
+Then, you can review your migration going into *`src >> db >> migrations`*, here you shoul be able to se a new file with {YourMigrationName} on it.
 
 ---
 
